@@ -101,7 +101,7 @@ main {
 }
 
 .news {
-    background-color: #10B981;
+    background-color: #374151;
     color: white;
     padding: 2rem;
     border-radius: 8px;
@@ -123,7 +123,7 @@ main {
 /* Botones */
 .button {
     display: inline-block;
-    background-color: #3B82F6;
+    background-color: #252525;
     color: white;
     padding: 0.5rem 1rem;
     border-radius: 4px;
