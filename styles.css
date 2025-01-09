@@ -1,3 +1,4 @@
+@import url('https://fonts.cdnfonts.com/css/gotham');
 /* Reset y estilos generales */
 * {
     margin: 0;
@@ -6,7 +7,7 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Gotham', sans-serif;
     line-height: 1.6;
     color: #333;
 }
@@ -21,7 +22,7 @@ body {
 /* Header y navegación */
 header {
     background-color: #000001;
-    color: white;
+    color: rgb(203, 32, 32);
     padding: 1rem 0;
 }
 
@@ -32,9 +33,10 @@ header {
 }
 
 .logo {
+    font-family: 'Gotham', sans-serif;
     font-size: 1.5rem;
     font-weight: bold;
-    color: white;
+    color: goldenrod;
     text-decoration: none;
 }
 
@@ -48,7 +50,9 @@ header {
 }
 
 .nav-links a {
-    color: white;
+    font-family: 'Gotham', sans-serif;
+    font-weight: bold;
+    color: goldenrod;
     text-decoration: none;
 }
 
@@ -122,6 +126,7 @@ main {
 
 /* Botones */
 .button {
+    font-family: 'Gotham', sans-serif;
     display: inline-block;
     background-color: #252525;
     color: white;

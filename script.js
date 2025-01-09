@@ -1,5 +1,5 @@
 // Función para manejar el menú móvil
-function toggleMobileMenu() {
+/*function toggleMobileMenu() {
     const navLinks = document.querySelector('.nav-links');
     navLinks.classList.toggle('active');
 }
@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     mobileMenuButton.addEventListener('click', toggleMobileMenu);
 });
-
+*/
 // Función para manejar el desplazamiento suave
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
