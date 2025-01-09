@@ -27,3 +27,33 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         });
     });
 });
+document.addEventListener('DOMContentLoaded', function() {
+    const jobSearchForm = document.getElementById('job-search-form');
+    const jobKeywordInput = document.getElementById('job-keyword');
+    const jobDepartmentSelect = document.getElementById('job-department');
+    const jobList = document.getElementById('job-list');
+
+    if (jobSearchForm) {
+        jobSearchForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const keyword = jobKeywordInput.value.toLowerCase();
+            const department = jobDepartmentSelect.value.toLowerCase();
+
+            const jobItems = jobList.querySelectorAll('.job-item');
+            jobItems.forEach(function(item) {
+                const title = item.querySelector('h3').textContent.toLowerCase();
+                const description = item.querySelector('.job-description').textContent.toLowerCase();
+                const itemDepartment = item.dataset.department.toLowerCase();
+
+                const keywordMatch = title.includes(keyword) || description.includes(keyword);
+                const departmentMatch = department === '' || itemDepartment === department;
+
+                if (keywordMatch && departmentMatch) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    }
+});

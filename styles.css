@@ -194,3 +194,168 @@ footer {
         margin-right: 1rem;
     }
 }
+/* Estilos existentes ... */
+
+/* Estilos para la página de noticias */
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.news-item {
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.news-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.news-content {
+    padding: 1.5rem;
+}
+
+.news-content h2 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.news-date {
+    font-size: 0.875rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.current-page {
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .news-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* Styles for Events page */
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.event-item {
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.event-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.event-content {
+    padding: 1.5rem;
+}
+
+.event-date {
+    font-weight: bold;
+    color: #3B82F6;
+    margin-bottom: 0.5rem;
+}
+
+/* Styles for Jobs page */
+.job-search {
+    margin-bottom: 2rem;
+}
+
+.search-form {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.search-form input,
+.search-form select {
+    flex: 1;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.job-item {
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.job-department {
+    font-weight: bold;
+    color: #3B82F6;
+    margin-bottom: 0.5rem;
+}
+
+/* Styles for Transparency page */
+.transparency-categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.category-item {
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    padding: 1.5rem;
+}
+
+.category-item h3 {
+    margin-bottom: 1rem;
+    color: #3B82F6;
+}
+
+.category-item ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.category-item li {
+    margin-bottom: 0.5rem;
+}
+
+.data-request,
+.open-data {
+    background-color: #10B981;
+    color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .search-form {
+        flex-direction: column;
+    }
+    
+    .transparency-categories {
+        grid-template-columns: 1fr;
+    }
+}

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seguridad - Gobierno de San Andreas</title>
+    <title>Empleos - Gobierno de San Andreas</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -12,6 +12,7 @@
             <div class="nav-content">
                 <a href="index.html" class="logo">San Andreas</a>
                 <ul class="nav-links">
+                    <li><a href="seguridad.html">Seguridad</a></li>
                     <li><a href="educacion.html">Educación</a></li>
                     <li><a href="salud.html">Salud</a></li>
                     <li><a href="turismo.html">Turismo</a></li>
@@ -22,36 +23,60 @@
 
     <main class="container">
         <section class="hero">
-            <h1>Secretaria de Seguridad y Proteccion Ciudadana</h1>
-            <p>Protegiendo a los ciudadanos de San Andreas</p>
-            <img src="https://via.placeholder.com/800x300" alt="Fuerzas de seguridad de San Andreas" class="hero-image">
+            <h1>Oportunidades de Empleo en San Andreas</h1>
+            <p>Únete a nuestro equipo y contribuye al desarrollo de nuestro estado</p>
         </section>
 
-        <section class="departments">
-            <div class="card">
-                <h2>Servicios de Emergencia Policial</h2>
-                <p>Nuestros servicios de emergencia están disponibles las 24 horas del día, los 7 días de la semana.</p>
-                <a href="https://discord.gg/7grUCxqMt2" class="button">Llamar al 911</a>
-            </div>
-            <div class="card">
-                <h2>Programas Comunitarios</h2>
-                <p>Trabajamos en estrecha colaboración con las comunidades para prevenir el crimen y fomentar la seguridad.</p>
-                <a href="#" class="button">Ver Programas</a>
+        <section class="job-search">
+            <h2>Buscar Empleos</h2>
+            <form id="job-search-form" class="search-form">
+                <input type="text" id="job-keyword" placeholder="Palabra clave o título del puesto">
+                <select id="job-department">
+                    <option value="">Todos las Secretarias</option>
+                    <option value="seguridad">Seguridad</option>
+                    <option value="gobierno">Gubernamental</option>
+                    <option value="salud">Salud</option>
+                    <option value="turismo">Turismo</option>
+                </select>
+                <button type="submit" class="button">Buscar</button>
+            </form>
+        </section>
+
+        <section class="job-listings">
+            <h2>Ofertas de Empleo Disponibles</h2>
+            <div id="job-list">
+                <article class="job-item" data-department="seguridad">
+                    <h3>Oficial de Seguridad</h3>
+                    <p class="job-department">Secretaria: SSPC</p>
+                    <p class="job-description">Buscamos oficiales de Seguridad comprometidos para mantener la seguridad en las oficinas gubernamentales.</p>
+                    <a href="https://forms.gle/NmTJ55ebM9y1bDLc6" class="button">Ver detalles</a>
+                </article>
+                <article class="job-item"data-department="gobierno">
+                    <h3>Personal Gubernamental</h3>
+                    <p class="job-department">Secretaria: General del Gobierno</p>
+                    <p class="job-description">Se requieren personal interesados en trabajar en estancias gubernamentales 6 dias semanales.</p>
+                    <a href="https://forms.gle/rxCmXFWtBbHLgJ1CA" class="button">Ver detalles</a>
+                </article>
+                <article class="job-item" data-department="salud">
+                    <h3>Medico y/o Personal de salud</h3>
+                    <p class="job-department">Secretaria de: Salud</p>
+                    <p class="job-description">Se buscan enfermeros/as para nuestros centros de salud y hospitales.</p>
+                    <a href="https://discord.gg/rRzRkRY8UQ" class="button">Ver detalles</a>
+                </article>
+                
             </div>
         </section>
 
-        <section class="news">
-            <h2>Alertas de Seguridad</h2>
-            <ul>
-                <li>
-                    <h3>Alerta de Tormenta</h3>
-                    <p>Se espera una fuerte tormenta este fin de semana. Por favor, tomen precauciones.</p>
-                </li>
-                <li>
-                    <h3>Ejercicio de Evacuación</h3>
-                    <p>El próximo martes se realizará un ejercicio de evacuación en el centro de la ciudad.</p>
-                </li>
-            </ul>
+        <section class="job-application">
+            <h2>¿Cómo aplicar?</h2>
+            <p>Para aplicar a cualquiera de nuestras ofertas de empleo, sigue estos pasos:</p>
+            <ol>
+                <li>Revisa los requisitos del puesto en la descripción detallada.</li>
+                <li>Prepara tu currículum vitae actualizado.</li>
+                <li>Escribe una carta de presentación explicando por qué eres el candidato ideal.</li>
+                <li>Envía tu aplicación a través de nuestro portal de empleos o al correo electrónico proporcionado en la oferta.</li>
+            </ol>
+            <p>Si tienes alguna pregunta, no dudes en contactar a nuestro departamento de Recursos Humanos.</p>
         </section>
     </main>
 
