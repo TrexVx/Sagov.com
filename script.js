@@ -57,3 +57,15 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+function toggleTheme() {
+    document.body.classList.toggle('dark-theme');
+    localStorage.setItem('theme', document.body.classList.contains('dark-theme') ? 'dark' : 'light');
+  }
+  
+  // Verificar el tema guardado al cargar la página
+  document.addEventListener('DOMContentLoaded', (event) => {
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.classList.add('dark-theme');
+    }
+  });

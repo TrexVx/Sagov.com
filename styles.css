@@ -12,6 +12,7 @@ body {
     color: #333;
     margin: 0;
     padding: 0;
+    transition: background-color 0.3s ease;
 }
 
 .container {
@@ -48,11 +49,22 @@ header {
     font-family: 'Gotham', sans-serif;
     font-size: 1.5rem;
     font-weight: bold;
-    color: goldenrod;
+    color: #B09A5B;
+    text-decoration: none;
+}
+.saed {
+    font-family: 'Gotham', sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #B09A5B;
     text-decoration: none;
 }
 .logo2 {
     width: 70px; /* Ajusta el ancho de la imagen */
+    height: auto; /* Mantén la proporción de la imagen */
+}
+.logo3 {
+    width: 250px; /* Ajusta el ancho de la imagen */
     height: auto; /* Mantén la proporción de la imagen */
 }
 
@@ -68,8 +80,9 @@ header {
 
 .nav-links a {
     font-family: 'Gotham', sans-serif;
+    font-size: 1.4rem;
     font-weight: bold;
-    color: goldenrod;
+    color: #B09A5B;
     text-decoration: none;
 }
 
@@ -107,7 +120,7 @@ main {
 }
 
 .card {
-    background-color: #f0f0f0;
+    background-color: #B09A5B;
     padding: 1.5rem;
     border-radius: 8px;
     text-align: center;
@@ -159,9 +172,10 @@ main {
 
 /* Footer */
 footer {
-    background-color: #1F2937;
+    background-color: #000000;
     color: white;
     padding: 2rem 0;
+    margin-top: 2rem;
 }
 
 .footer-content {
@@ -179,7 +193,7 @@ footer {
 }
 
 .footer-section a {
-    color: #9CA3AF;
+    color: #ffffff;
     text-decoration: none;
 }
 
@@ -364,7 +378,7 @@ footer {
 
 .data-request,
 .open-data {
-    background-color: #10B981;
+    background-color: #b9a010;
     color: white;
     padding: 2rem;
     border-radius: 8px;
@@ -381,3 +395,22 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+.dark-theme {
+    background-color: #333;
+    color: #ffffff;
+    
+  }
+  
+  .theme-toggle {
+    font-family: 'Gotham', sans-serif;
+    font-weight: bold;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #B09A5B;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
