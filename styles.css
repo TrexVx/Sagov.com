@@ -24,20 +24,36 @@ body {
 
 /* Header y navegación */
 header {
-    background-color: #000001;
-    color: rgb(0, 0, 0);
-    padding: 1rem 0;
+    background-color: #000000;
+    color: rgb(255, 255, 255);
     padding: 20px;
+    position: fixed;
+    width: 100%;
+    top: -10px;
+    transition: top 0.3s;
+    z-index: 1000;
     text-align: center;
 }
- header h1 {
+header.visible {
+    top: 0;
+}
+header h1 {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 10px;
+    margin: 0;
   }
   header h1 svg {
     flex-shrink: 0;
   }
+  main {
+    padding-top: 100px; /* Ajusta este valor según la altura de tu header */
+}
+.content {
+    height: 2000px; /* Solo para demostración del scroll */
+}
+
 
 .nav-content {
     display: flex; /* Alineación horizontal */
@@ -49,14 +65,14 @@ header {
     font-family: 'Gotham', sans-serif;
     font-size: 1.5rem;
     font-weight: bold;
-    color: #B09A5B;
+    color: #ffffff;
     text-decoration: none;
 }
 .saed {
     font-family: 'Gotham', sans-serif;
     font-size: 1.5rem;
     font-weight: bold;
-    color: #B09A5B;
+    color: #ffffff;
     text-decoration: none;
 }
 .logo2 {
@@ -64,7 +80,7 @@ header {
     height: auto; /* Mantén la proporción de la imagen */
 }
 .logo3 {
-    width: 250px; /* Ajusta el ancho de la imagen */
+    width: 175px; /* Ajusta el ancho de la imagen */
     height: auto; /* Mantén la proporción de la imagen */
 }
 
@@ -82,7 +98,7 @@ header {
     font-family: 'Gotham', sans-serif;
     font-size: 1.4rem;
     font-weight: bold;
-    color: #B09A5B;
+    color: #ffffff;
     text-decoration: none;
 }
 
@@ -125,7 +141,12 @@ main {
     border-radius: 8px;
     text-align: center;
 }
-
+.card2 {
+    background-color: #ffbb00;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+}
 .card h2 {
     margin-bottom: 0.5rem;
 }
