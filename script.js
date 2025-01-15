@@ -1,22 +1,26 @@
-// Función para manejar el menú móvil
-/*function toggleMobileMenu() {
-    const navLinks = document.querySelector('.nav-links');
-    navLinks.classList.toggle('active');
+function toggleDropdown() {
+    const button = document.querySelector('.dropdown-button');
+    const dropdownContent = document.getElementById("departamentosDropdown");
+    const isExpanded = button.getAttribute('aria-expanded') === 'true';
+    
+    button.setAttribute('aria-expanded', !isExpanded);
+    dropdownContent.classList.toggle("show");
 }
 
-// Agregar evento de clic al botón de menú móvil
-document.addEventListener('DOMContentLoaded', () => {
-    const mobileMenuButton = document.createElement('button');
-    mobileMenuButton.classList.add('mobile-menu-button');
-    mobileMenuButton.innerHTML = '☰';
-    mobileMenuButton.setAttribute('aria-label', 'Abrir menú');
-    
-    const nav = document.querySelector('nav');
-    nav.insertBefore(mobileMenuButton, nav.firstChild);
-
-    mobileMenuButton.addEventListener('click', toggleMobileMenu);
-});
-*/
+// Cerrar el dropdown si el usuario hace clic fuera de él
+window.onclick = function(event) {
+    if (!event.target.matches('.dropdown-button') && !event.target.matches('.arrow-icon')) {
+        const dropdowns = document.getElementsByClassName("dropdown-content");
+        const buttons = document.getElementsByClassName("dropdown-button");
+        
+        for (let i = 0; i < dropdowns.length; i++) {
+            if (dropdowns[i].classList.contains('show')) {
+                dropdowns[i].classList.remove('show');
+                buttons[i].setAttribute('aria-expanded', 'false');
+            }
+        }
+    }
+}
 // Función para manejar el desplazamiento suave
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -69,7 +73,7 @@ function toggleTheme() {
       document.body.classList.add('dark-theme');
     }
   });
-  let lastScrollTop = 0;
+  /*let lastScrollTop = 0;
         const header = document.getElementById('header');
         const scrollThreshold = 200; // Ajusta este valor según tus necesidades
 
@@ -85,7 +89,7 @@ function toggleTheme() {
             }
             
             lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
-        }, false);
+        }, false);*/
 
         function toggleTheme() {
             document.body.classList.toggle('dark-theme');
@@ -98,3 +102,61 @@ function toggleTheme() {
                 document.body.classList.add('dark-theme');
             }
         });
+        
+        let isNavOpen = false;
+
+        function toggleNav() {
+            if (isNavOpen) {
+                closeNav();
+            } else {
+                openNav();
+            }
+        }
+
+        function openNav() {
+            document.getElementById("mySidebar").style.left = "0";
+            document.getElementById("overlay").style.display = "block";
+            document.getElementById("openbtn").style.left = "250px";
+            isNavOpen = true;
+        }
+
+        function closeNav() {
+            document.getElementById("mySidebar").style.left = "-250px";
+            document.getElementById("overlay").style.display = "none";
+            document.getElementById("openbtn").style.left = "0";
+            isNavOpen = false;
+        }
+
+        let lastScrollTop = 0;
+        const header = document.getElementById('header');
+        const scrollThreshold = 200;
+
+        window.addEventListener('scroll', function() {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            
+            if (scrollTop > lastScrollTop && scrollTop > scrollThreshold) {
+                header.classList.remove('visible');
+            } else {
+                header.classList.add('visible');
+            }
+            
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+        }, false);
+
+        function toggleTheme() {
+            document.body.classList.toggle('dark-theme');
+            localStorage.setItem('theme', document.body.classList.contains('dark-theme') ? 'dark' : 'light');
+        }
+
+        document.addEventListener('DOMContentLoaded', (event) => {
+            if (localStorage.getItem('theme') === 'dark') {
+                document.body.classList.add('dark-theme');
+            }
+        });
+         /*function(e) {
+            var a = $(this).attr("src");
+            $("#show").css("background-image", 'url("' + a + '")'), 0 == ctrlPermisao && $("#lector").trigger("change");
+            a = $(this).get(0).tagName;
+            let t = "";
+            t = "DIV" == a ? 0 < $(this).children().length ? "" : $(this).text() : "IMG" == a ? $(this).get(0).alt : "a" == a ? $("a").data("title") : $(this).text(), "true" === localStorage.getItem("activeAudio") && "" != t.trim() && (a = new SpeechSynthesisUtterance(t), window.speechSynthesis.speak(a))
+          };*/
