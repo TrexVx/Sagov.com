@@ -173,9 +173,6 @@ function toggleTheme() {
               if (urgent === 'Otro') {
                   urgentResponse += `: ${otherReason}`;
               }
-              elseif (urgent === 'A') {
-                urgentResponse += `: ${otherReason}`;
-            }
 
               const data = {
                 embeds: [{
