@@ -154,7 +154,7 @@ function toggleTheme() {
             }
         });
 
-          const webhookURL = 'https://discord.com/api/webhooks/1328924328258965596/9C5u3wch0V0lAGsV--NLe7A6V88NO8rusBGq4vovy3n6VGBf_EXnj3YhzYsZFQpcyR-5'; // Reemplaza esto con tu URL de webhook de Discord
+          const webhookURL = 'https://discord.com/api/webhooks/1328924328258965596/9C5u3wch0V0lAGsV--NLe7A6V88NO8rusBGq4vovy3n6VGBf_EXnj3YhzYsZFQpcyR-5'; 
 
           document.getElementById('discordForm').addEventListener('submit', function(e) {
               e.preventDefault();
