@@ -153,10 +153,94 @@ function toggleTheme() {
                 document.body.classList.add('dark-theme');
             }
         });
-         /*function(e) {
-            var a = $(this).attr("src");
-            $("#show").css("background-image", 'url("' + a + '")'), 0 == ctrlPermisao && $("#lector").trigger("change");
-            a = $(this).get(0).tagName;
-            let t = "";
-            t = "DIV" == a ? 0 < $(this).children().length ? "" : $(this).text() : "IMG" == a ? $(this).get(0).alt : "a" == a ? $("a").data("title") : $(this).text(), "true" === localStorage.getItem("activeAudio") && "" != t.trim() && (a = new SpeechSynthesisUtterance(t), window.speechSynthesis.speak(a))
-          };*/
+
+          const webhookURL = 'https://discord.com/api/webhooks/1328924328258965596/9C5u3wch0V0lAGsV--NLe7A6V88NO8rusBGq4vovy3n6VGBf_EXnj3YhzYsZFQpcyR-5'; // Reemplaza esto con tu URL de webhook de Discord
+
+          document.getElementById('discordForm').addEventListener('submit', function(e) {
+              e.preventDefault();
+              
+              const name = document.getElementById('name').value;
+              const discord = document.getElementById('discord').value;
+              const steam = document.getElementById('steam').value;
+              const email = document.getElementById('email').value;
+              const subject = document.getElementById('subject').value;
+              const department = document.getElementById('department').value;
+              const urgent = document.querySelector('input[name="urgent"]:checked').value;
+              const otherReason = document.getElementById('otherReason').value;
+              const message = document.getElementById('message').value;
+              
+              let urgentResponse = urgent;
+              if (urgent === 'Otro') {
+                  urgentResponse += `: ${otherReason}`;
+              }
+              elseif (urgent === 'A') {
+                urgentResponse += `: ${otherReason}`;
+            }
+
+              const data = {
+                embeds: [{
+                    title: '📄 Nueva Postulación',
+                    description: 'Se ha recibido una nueva postulación con los siguientes detalles:',
+                    fields: [
+                        { name: '🧑 Nombre', value: name, inline: true },
+                        { name: '🎮 Discord ID', value: discord, inline: true },
+                        { name: '🎮 Steam', value: steam, inline: true },
+                        { name: '📧 Correo Electrónico', value: email, inline: false },
+                        { name: '📝 Asunto', value: subject, inline: true },
+                        { name: '🏢 Departamento', value: department, inline: true },
+                        { name: '⚖️Acepta el tratamiento de Información', value: urgentResponse },
+                        { name: '📨 Mensaje', value: message, inline: false }
+                    ],
+                    color: 16766720, // Dorado
+                    timestamp: new Date().toISOString(), // Muestra la fecha y hora
+                    footer: {
+                        text: 'Postulaciones Automáticas',
+                        icon_url: 'https://i.ibb.co/D9hjqdb/SAGOV-3.png' // URL opcional para un icono en el pie
+                    }
+                }]
+            };
+              
+            fetch(webhookURL, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
+            })
+            .then(response => {
+                if (response.ok) {
+                    document.getElementById('status').textContent = 'Mensaje enviado con éxito!';
+                    document.getElementById('discordForm').reset();
+                    document.getElementById('otherReasonContainer').style.display = 'none';
+                } else {
+                    document.getElementById('status').textContent = 'Error al enviar el mensaje. Por favor, inténtalo de nuevo.';
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                document.getElementById('status').textContent = 'Error al enviar el mensaje. Por favor, inténtalo de nuevo.';
+            });
+        });
+
+        // Mostrar/ocultar el campo de texto para "Otro" razón
+        document.querySelectorAll('input[name="urgent"]').forEach(radio => {
+            radio.addEventListener('change', function() {
+                const otherReasonContainer = document.getElementById('otherReasonContainer');
+                if (this.value === '') {
+                    otherReasonContainer.style.display = 'block';
+                } else {
+                    otherReasonContainer.style.display = 'none';
+                }
+            });
+        });
+
+        function toggleTheme() {
+            document.body.classList.toggle('dark-theme');
+            localStorage.setItem('theme', document.body.classList.contains('dark-theme') ? 'dark' : 'light');
+        }
+
+        document.addEventListener('DOMContentLoaded', (event) => {
+            if (localStorage.getItem('theme') === 'dark') {
+                document.body.classList.add('dark-theme');
+            }
+        });

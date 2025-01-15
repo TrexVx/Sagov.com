@@ -14,6 +14,10 @@ body {
     color: #333;
     margin: 0;
     padding: 0;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;   
     transition: background-color 0.3s ease;
 }
 
@@ -595,12 +599,12 @@ section.no-bg,
 
 /* Tema oscuro */
 .dark-theme .dropdown-button {
-    background-color: #000000;
+    background-color: #611232;
     color: white;
 }
 
 .dark-theme .dropdown-content {
-    background-color: #000000;
+    background-color: #611232;
     border: 1px solid #2d3748;
 }
 
@@ -702,7 +706,7 @@ section.no-bg,
 }
 
 .dark-theme .sidebar {
-    background-color: #000000;
+    background-color: #611232;
 }
 
 .dark-theme .sidebar a {
@@ -714,7 +718,7 @@ section.no-bg,
 }
 
 .dark-theme .openbtn {
-    background-color: #000000;
+    background-color: #611232;
 }
 footer .footer-pleca {
 	background-image: url(/public/images/pleca.svg);
@@ -737,4 +741,170 @@ footer .footer-pleca {
     margin-right: auto;
     margin-left: auto;
   }
-  
+  .departments2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 0.5fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+.card3 {
+    background-color: #B09A5B;
+    padding: 2rem;
+    padding-top: 40px;
+    top: 50px;
+    left: 10px;
+    margin: 0 auto;
+    max-width: 500px;
+    width: 100%;
+    border-radius: 8px;
+}
+  .container3 {
+    font-family: 'Gotham', sans-serif;
+    font-size: 37px;
+    color: #ffffff;
+    font-weight: bolder;
+    margin: 0 auto;
+    position:static;
+    top: 50px;
+    left: 10px;
+    background-color: #611232;
+    padding: 2rem;
+    padding-top: 40px;
+    border-radius: 8px;
+    box-shadow: 0 36px 56px #000000;
+    width: 100%;
+    max-width: 800px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    
+}
+  .container2 {
+    font-family: 'Gotham', sans-serif;
+    margin: 0 auto;
+    position:static;
+    top: 50px;
+    left: 10px;
+    background-color: #ffffff;
+    padding: 2rem;
+    padding-top: 40px;
+    border-radius: 8px;
+    box-shadow: 0 36px 56px #000000;
+    width: 100%;
+    max-width: 800px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    
+}
+
+form {
+    font-family: 'Gotham', sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+label {
+    font-family: 'Gotham', sans-serif;
+    font-size: 25px;
+    margin-bottom: 0.5rem;
+    color: #000000;
+    font-weight: bold;
+}
+.titulos{
+    font-family: 'Gotham', sans-serif;
+    font-size: 37px;
+    color: #ffffff;
+    font-weight: bolder;
+    text-align: center;
+}
+.titulos2{
+    font-family: 'Gotham', sans-serif;
+    font-size: 37px;
+    color: #000000;
+    font-weight: bolder;
+    text-align: center;
+}
+.sapd{
+    font-family: 'Gotham', sans-serif;
+    font-size: 20px;
+    color: #ffffff;
+    font-weight: bolder;
+    background-color: #000000bb;
+}
+select{
+    font-family: 'Gotham', sans-serif;
+    font-size: 25px;
+}
+input, textarea {
+    font-family: 'Gotham', sans-serif;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+.enviar{
+    font-weight: bold;
+    font-family: 'Gotham', sans-serif;
+    font-size: 25px;    
+    top: 1rem;
+    right: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #611232;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;    
+}
+.footer-bottom2 {
+    margin-top: 2rem;
+    text-align: center;
+    padding-top: 1rem;
+    border-top: 5px solid #ffffff;
+    border-radius: 10%;
+}
+.footer-bottom3 {
+    margin-top: 2rem;
+    text-align: center;
+    padding-top: 1rem;
+    border-top: 5px solid #000000;
+    border-radius: 10%;
+}
+.radio-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 1rem;
+}
+.radio-group label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.radio-group input[type="radio"] {
+    margin-right: 5px;
+}
+#otherReasonContainer {
+    display: none;
+    margin-top: 0.5rem;
+}
+#status {
+    font-family: 'Gotham', sans-serif;
+    margin-top: 1rem;
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px; 
+    color: #000000;
+}
+.dark-theme .container2 {
+    background-color: #2d3748;
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+}
+.dark-theme h1 {
+    color: #e2e8f0;
+}
+.dark-theme label {
+    color: #e2e8f0;
+}
+.dark-theme input, .dark-theme textarea, .dark-theme select {
+    background-color: #4a5568;
+    border-color: #718096;
+    color: #e2e8f0;
+}

@@ -3,13 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Empleos - Gobierno de San Andreas</title>
+    <title>Formulario - San Andreas</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="public/images/logos/icons.png">
 </head>
 <body>
     <button class="theme-toggle" onclick="toggleTheme()">Cambiar tema</button>
-
     <header>
         <nav class="container">
             <div class="nav-content">
@@ -55,70 +54,140 @@
                 <a href="index.html" class="saed">Inicio</a>
                 <a href="seguridad.html" class="saed">Seguridad</a>
                 <a href="salud.html" class="saed">Salud</a>
+                <a href="empleos.html" class="saed">Empleos</a>
                 <a href="turismo.html" class="saed">Turismo</a>
             </div>
         </div>
     </header>
-    <main class="container">
-        <section class="hero">
-            <h1>Oportunidades de Empleo en San Andreas</h1>
-            <p>Únete a nuestro equipo y contribuye al desarrollo de nuestro estado</p>
-        </section>
+    <section class="hero">
+        <h1>Currículum Vitae - SAGOV</h1>
+        <div class="footer-bottom3"></div>
+    </section>
+    
+    <div class="departments2">
+        <div class="card3">
+        <p>
+            <h2>Requisitos (OOC):</h2>
+            <ul>
+                <li>Estar dispuesto a aprender y compartir las ideas.</li>
+                <li>Tener mínima experiencia en el área a escoger.</li>
+                <li>Ser paciente.</li>
+                <li>Edad mínima 16 años.</li>
+            </ul>
+        </p>
+    </div>
+    <div class="card3">
+        <p>
+            <h2>Requisitos (IC):</h2>
+            <ul>
+                <li>Tener estudios y previa experiencia.</li>
+                <li>Disponer de tiempo y voluntad.</li>
+                <li>Saber expresarse acerca de todas las áreas referentes al gobierno.</li>
+                <li>No tener antecedentes penales.</li>
+            </ul>
+        </p>
+    </div>
+</div>
+        <div class="footer-bottom3"></div>
 
-        <section class="job-search">
-            <h2>Buscar Empleos</h2>
-            <form id="job-search-form" class="search-form">
-                <input type="text" id="job-keyword" placeholder="Palabra clave o título del puesto">
-                <select id="job-department">
-                    <option value="">Todos las Secretarias</option>
-                    <option value="seguridad">Seguridad</option>
-                    <option value="gobierno">Gubernamental</option>
-                    <option value="salud">Salud</option>
-                    <option value="turismo">Turismo</option>
-                </select>
-                <button type="submit" class="button">Buscar</button>
-            </form>
-        </section>
-        <section class="job-listings">
-            <h2>Ofertas de Empleo Disponibles</h2>
-            <div id="job-list">
-                <article class="job-item" data-department="seguridad">
-                    <img src="public/images/logos/Seal_of_the_United_States_Marshals_Service.png" alt="" class="logo2">
-                    <h3>Oficial de Seguridad</h3>
-                    <p class="job-department">Secretaria: SSPC</p>
-                    <p class="job-description">Buscamos oficiales de Seguridad comprometidos para mantener la seguridad en las oficinas gubernamentales.</p>
-                    <a href="formulario1.html" class="button">Ver detalles</a>
-                </article>
-                <article class="job-item"data-department="gobierno">
-                    <img src="public/images/logos/SASeal.png" alt="" class="logo2">
-                    <h3>Personal Gubernamental</h3>
-                    <p class="job-department">Secretaria: General del Gobierno</p>
-                    <p class="job-description">Se requieren personal interesados en trabajar en estancias gubernamentales 6 dias semanales.</p>
-                    <a href="https://forms.gle/rxCmXFWtBbHLgJ1CA" class="button">Ver detalles</a>
-                </article>
-                <article class="job-item" data-department="salud">
-                    <img src="public/images/logos/6406_hospital.png" alt="" class="logo2">
-                    <h3>Medico y/o Personal de salud</h3>
-                    <p class="job-department">Secretaria de: Salud</p>
-                    <p class="job-description">Se buscan enfermeros/as para nuestros centros de salud y hospitales.</p>
-                    <a href="https://discord.gg/rRzRkRY8UQ" class="button">Ver detalles</a>
-                </article>
+    <body>
+        <button class="theme-toggle" onclick="toggleTheme()">Cambiar tema</button>
+        <br>
+        <div class="container3">
+            <div class="footer-bottom2"></div>
+            <h1 class="titulos">POSTULACIONES SAN ANDREAS GOVERNMENT</h1>
+            <div class="footer-bottom2"></div>
+        </div>
+        <div class="container2">
+            <form id="discordForm">
+             <h1 class="titulos2">Preguntas OOC</h1>
+             <div class="footer-bottom3"></div>
+             <p> Las siguientes preguntas son de carácter OOC, por favor contestar de acorde. </p>
                 
-            </div>
-        </section>
+                <label for="discord">Nombre de Discord:</label>
+                <p class="sapd"> Recuerda usar el formato el nuevo formato, este no debe ser cambiado hasta ser aceptado ya que es la única manera de comunicarnos</p>
+                <input type="text" id="discord" name="discord" required placeholder="Ejem:@trexvx " required="" value="">
 
-        <section class="job-application">
-            <h2>¿Cómo aplicar?</h2>
-            <p>Para aplicar a cualquiera de nuestras ofertas de empleo, sigue estos pasos:</p>
-            <ol>
-                <li>Revisa los requisitos del puesto en la descripción detallada.</li>
-                <li>Prepara tu currículum vitae actualizado.</li>
-                <li>Escribe una carta de presentación explicando por qué eres el candidato ideal.</li>
-                <li>Envía tu aplicación a través de nuestro portal de empleos o al correo electrónico proporcionado en la oferta.</li>
-            </ol>
-            <p>Si tienes alguna pregunta, no dudes en contactar a nuestro departamento de Recursos Humanos.</p>
-        </section>
-    </main>
+                <label for="name">Steam:</label>
+                <p class="sapd"></p>
+                <input type="text" id="steam" name="steam" required placeholder="Ejem:https://steamcommunity.com/profiles/xxxxxxxx/" required="" value="">
+
+                <label for="email">Correo electrónico:</label>
+                <p class="sapd"></p>
+                <input type="email" id="email" name="email" required placeholder="Correo de Google/Gmail" required="" value="">
+                
+                <label for="subject"> Edad OOC :</label>
+                <p class="sapd"></p>
+                <input type="text" id="subject" name="subject" required>
+
+                <label for="name"> Tienes alguna sanción o reporte? </label>
+            <div class="radio-group">          
+                <label>
+                    <input type="radio" name="urgent" value="No" required> No
+                </label>
+                <label>
+                    <input type="radio" name="urgent" value="Tal vez"> Tal vez
+                </label>
+                <label>
+                    <input type="radio" name="urgent" value="A"> Sí
+                </label>
+            </div>
+            <div id="otherReasonContainer">
+                <label for="otherReason">Especifique la razón:</label>
+                <input type="text" id="otherReason" name="otherReason">
+            </div>
+                
+                <label for="department">Secretaria/Dependencia:</label>
+                <p class="sapd"></p>
+                <select id="department" name="department" required>
+                    <option value="">Seleccione una Secretaria</option>
+                    <option value="SAGOV">Secretaria General de Gobierno</option>
+                    <option value="SSPC">Secretaria de Seguridad y Proteccion Ciudadana</option>
+                    <option value="SALUD">Secretaria de Salud</option>
+                    <option value="ECONOMIA">Secretaria de Economia y del Trabajo</option>
+                    <option value="SEOP">Secretaria de Obras Publicas</option>
+                    <option value="SEMAHN">Secretaria de Medio Ambiente e Historia Natural</option>
+                    <option value="IGUALDAD">Secretaria de Igualdad de Genero</option>
+                    <option value="HACIENDA">Secretaria de Hacienda</option>
+                    <option value="Gobierno">Personal del gobierno (Trabajador comun)</option>
+                </select>
+            
+            <h1 class="titulos2">Preguntas IC</h1>
+             <div class="footer-bottom3"></div>
+             <p> Las siguientes preguntas son de carácter IC, por favor contestar de acorde. </p>
+
+             <label for="name"> Nombre y Apellido :</label>
+             <p class="sapd">El nombre IC debe ser el mismo utilizado en el Servidor.</p>
+             <input type="text" id="name" name="name" required  placeholder="Correo de Google/Gmail" required="" value="">
+
+             <label for="name">Acepta el tratamiento de Información</label>
+            <div class="radio-group">          
+                <label>
+                    <input type="radio" name="urgent" value="Sí" required> Sí
+                </label>
+                <label>
+                    <input type="radio" name="urgent" value="Tal vez"> Tal vez
+                </label>
+                <label>
+                    <input type="radio" name="urgent" value="Otro"> No
+                </label>
+            </div>
+            <div id="otherReasonContainer">
+                <label for="otherReason">Especifique la razón:</label>
+                <input type="text" id="otherReason" name="otherReason">
+            </div>
+
+                <label for="message">Mensaje:</label>
+                <p class="sapd"></p>
+                <textarea id="message" name="message" rows="5" required></textarea>
+                <div class="footer-bottom3"></div>
+                <p> Una vez enviados el formulario serás contactado al finalizar el periodo de postulaciones para una reunión, se te avisará por  aplicativo. Nos reservamos el derecho de admisión y daremos las plazas de trabajo de acorde a la experiencia laborar de la persona. Es decir, si no te vemos apto para el puesto seleccionado se te ofrecerá una alternativa o se te negara depende de los resultados.  </p>
+                <div class="footer-bottom3"></div>
+                <button class="enviar" type="submit">Enviar</button>
+            </form>
+            <div id="status"></div>
+        </div>
+</body>    
 
     <footer>
         <div class="container">
