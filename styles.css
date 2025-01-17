@@ -60,8 +60,6 @@ header h1 {
 .content {
     height: 2000px; /* Solo para demostración del scroll */
 }
-
-
 .nav-content {
     display: flex; /* Alineación horizontal */
     align-items: center; /* Centrar verticalmente */
