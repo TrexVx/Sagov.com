@@ -31,7 +31,7 @@ body {
 /* Header y navegación */
 header {
     background-color: #611232;
-    background-image: url(/public/images/header.png);
+    background-image: url(public/images/header.png);
     color: rgb(255, 255, 255);
     padding: 15px;
     position: fixed;
@@ -207,7 +207,7 @@ main {
 /* Footer */
 footer {
     background-repeat: inherit;
-    background-image: url(/public/images/footer.png);
+    background-image: url(public/images/footer.png);
     background-color: #611232;
     color: white;
     padding: 2rem 0;
