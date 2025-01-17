@@ -31,6 +31,7 @@ body {
 /* Header y navegación */
 header {
     background-color: #611232;
+    background-image: url(/public/images/header.png);
     color: rgb(255, 255, 255);
     padding: 15px;
     position: fixed;
@@ -206,7 +207,7 @@ main {
 /* Footer */
 footer {
     background-repeat: inherit;
-    background-image: url(/public/images/pleca.svg);
+    background-image: url(/public/images/footer.png);
     background-color: #611232;
     color: white;
     padding: 2rem 0;
@@ -557,7 +558,7 @@ section.no-bg,
 
 .dropdown-button {
     font-family: 'Gotham Black', sans-serif;
-    background-color: #611232;
+    background-color: #61123200;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -671,10 +672,10 @@ section.no-bg,
 .openbtn {
     font-size: 20px;
     cursor: pointer;
-    background-color: #611232;
+    background-color: #611232c4;
     color: white;
     padding: 9px 13px;
-    border: 1px solid #ffffff42;
+    border: 1px solid #ffffffeb;
     border-radius: 20%;
     position: fixed;
     left: 0;
