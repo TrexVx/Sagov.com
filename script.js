@@ -157,36 +157,71 @@ function toggleTheme() {
           const webhookURL = 'https://discord.com/api/webhooks/1328924328258965596/9C5u3wch0V0lAGsV--NLe7A6V88NO8rusBGq4vovy3n6VGBf_EXnj3YhzYsZFQpcyR-5'; 
 
           document.getElementById('discordForm').addEventListener('submit', function(e) {
-              e.preventDefault();
+            e.preventDefault();
               
-              const name = document.getElementById('name').value;
+              /*const name = document.getElementById('name').value;*/
               const discord = document.getElementById('discord').value;
               const steam = document.getElementById('steam').value;
               const email = document.getElementById('email').value;
-              const subject = document.getElementById('subject').value;
-              const department = document.getElementById('department').value;
+              
               const urgent = document.querySelector('input[name="urgent"]:checked').value;
               const otherReason = document.getElementById('otherReason').value;
+              const tiempo = document.getElementById('tiempo').value;
+              const per01 = document.getElementById('per01').value;
+              const rol = document.getElementById('rol').value;
+              const name02 = document.getElementById('name02').value;
+              const nacionalidad = document.getElementById('nacionalidad').value;
+              const department = document.getElementById('department').value;
+              const laboral = document.getElementById('laboral').value;
+              const contrato = document.getElementById('contrato').value;
+              const tratamiento = document.getElementById('tratamiento').value;
               const message = document.getElementById('message').value;
-              
+              const edadValue = document.getElementById('edad').value.trim();
+              const edadValue2 = document.getElementById('ooc').value.trim();
+
+    // Validar que "edad" sea un número entero positivo
+    if (!/^\d+$/.test(edadValue) || Number(edadValue) < 0) {
+        document.getElementById('status').textContent = 'Por favor, ingrese una edad válida (número entero positivo).';
+        return;
+    }
+    const edad = parseInt(edadValue, 10);
+
+    if (!/^\d+$/.test(edadValue2) || Number(edadValue2) < 0) {
+        document.getElementById('status').
+        return;textContent = 'Por favor, ingrese una edad válida (número entero positivo).';
+    }
+    const ooc = parseInt(edadValue, 10);
               let urgentResponse = urgent;
-              if (urgent === 'Otro') {
-                  urgentResponse += `: ${otherReason}`;
-              }
+            if (urgent === 'Otro') {
+                urgentResponse += `: ${otherReason}`;
+            }
 
               const data = {
                 embeds: [{
                     title: '📄 Nueva Postulación',
                     description: 'Se ha recibido una nueva postulación con los siguientes detalles:',
                     fields: [
-                        { name: '🧑 Nombre', value: name, inline: true },
-                        { name: '🎮 Discord ID', value: discord, inline: true },
+                        { name: '', value: '\u200B' },
+                        { name: '-----🔗 Datos OOC 🔗-----', value: '\u200B' },
+                        { name: '🎮 Discord ID', value: discord, inline: false },
                         { name: '🎮 Steam', value: steam, inline: true },
                         { name: '📧 Correo Electrónico', value: email, inline: false },
-                        { name: '📝 Asunto', value: subject, inline: true },
-                        { name: '🏢 Departamento', value: department, inline: true },
-                        { name: '⚖️Acepta el tratamiento de Información', value: urgentResponse },
-                        { name: '📨 Mensaje', value: message, inline: false }
+                        { name: '🎂 Edad OOC', value: edad.toString(), inline: false },
+                        { name: '❌ Tienes alguna sanción o reporte', value: urgentResponse },
+                        { name: '🕐 Disponibilidad de Tiempo: Días y Horario', value: tiempo, inline: false },
+                        { name: '🧑‍🔧 ¿A qué se dedica tu personaje actualmente?', value: per01, inline: false },
+                        
+                        { name: '', value: '\u200B' },
+                        { name: '🙍 ¿Alguna vez has desarrollado un rol de este estilo?', value: rol, inline: false },
+                        { name: '-----📋 Datos IC 📋-----', value: '\u200B' },
+                        { name: '⭐ Nombre y Apellido IC', value: name02, inline: true },
+                        { name: '🎂 Edad IC', value: edad.toString(), inline: true },
+                        { name: '🌐 Nacionalidad', value: nacionalidad, inline: true },
+                        { name: '🏢 Secretaria', value: department, inline: false },
+                        { name: '💼 ¿Cual es su experiencia laboral?', value: laboral, inline: false },
+                        { name: '📋 ¿Por qué cree que deberíamos contratarle?', value: contrato, inline: false },
+                        { name: '⚖️ Acepta el tratamiento de Información', value: tratamiento, inline: false},
+                        { name: '📨 ¿Como cree que podría aportar positivamente al Gobierno de San Andreas?', value: message, inline: false }
                     ],
                     color: 16766720, // Dorado
                     timestamp: new Date().toISOString(), // Muestra la fecha y hora
@@ -223,7 +258,7 @@ function toggleTheme() {
         document.querySelectorAll('input[name="urgent"]').forEach(radio => {
             radio.addEventListener('change', function() {
                 const otherReasonContainer = document.getElementById('otherReasonContainer');
-                if (this.value === '') {
+                if (this.value === 'Otro') {
                     otherReasonContainer.style.display = 'block';
                 } else {
                     otherReasonContainer.style.display = 'none';

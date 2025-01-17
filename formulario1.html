@@ -103,7 +103,7 @@
              <h1 class="titulos2">Preguntas OOC</h1>
              <div class="footer-bottom3"></div>
              <p> Las siguientes preguntas son de carácter OOC, por favor contestar de acorde. </p>
-                
+               
                 <label for="discord">Nombre de Discord:</label>
                 <p class="sapd"> Recuerda usar el formato el nuevo formato, este no debe ser cambiado hasta ser aceptado ya que es la única manera de comunicarnos</p>
                 <input type="text" id="discord" name="discord" required placeholder="Ejem:@trexvx " required="" value="">
@@ -118,9 +118,9 @@
                 
                 <label for="subject"> Edad OOC :</label>
                 <p class="sapd"></p>
-                <input type="text" id="subject" name="subject" required>
+                <input id="ooc" type="number" step="1" min="0" max="120" required />
 
-                <label for="name"> Tienes alguna sanción o reporte? </label>
+                <label for="name">¿Tienes alguna sanción o reporte? </label>
             <div class="radio-group">          
                 <label>
                     <input type="radio" name="urgent" value="No" required> No
@@ -129,28 +129,26 @@
                     <input type="radio" name="urgent" value="Tal vez"> Tal vez
                 </label>
                 <label>
-                    <input type="radio" name="urgent" value="A"> Sí
+                    <input type="radio" name="urgent" value="Otro"> SÍ
                 </label>
             </div>
             <div id="otherReasonContainer">
                 <label for="otherReason">Especifique la razón:</label>
                 <input type="text" id="otherReason" name="otherReason">
             </div>
-                
-                <label for="department">Secretaria/Dependencia:</label>
-                <p class="sapd"></p>
-                <select id="department" name="department" required>
-                    <option value="">Seleccione una Secretaria</option>
-                    <option value="SAGOV">Secretaria General de Gobierno</option>
-                    <option value="SSPC">Secretaria de Seguridad y Proteccion Ciudadana</option>
-                    <option value="SALUD">Secretaria de Salud</option>
-                    <option value="ECONOMIA">Secretaria de Economia y del Trabajo</option>
-                    <option value="SEOP">Secretaria de Obras Publicas</option>
-                    <option value="SEMAHN">Secretaria de Medio Ambiente e Historia Natural</option>
-                    <option value="IGUALDAD">Secretaria de Igualdad de Genero</option>
-                    <option value="HACIENDA">Secretaria de Hacienda</option>
-                    <option value="Gobierno">Personal del gobierno (Trabajador comun)</option>
-                </select>
+
+            <label for="name">Disponibilidad de Tiempo: Días y Horario:</label>
+            <p class="sapd"></p>
+            <input type="text" id="tiempo" name="tiempo" required placeholder="Ejem:5/6 hrs" required="" value="">
+
+            <label for="name"> ¿A qué se dedica tu personaje actualmente? </label>
+            <p class="sapd">Debes ser lo más sincero posible, incluso si haces actos delictivos explicarlo.</p>
+            <input type="text" id="per01" name="per01" required placeholder="Ejem: Policia/SAMS" required="" value="">
+
+            <label for="name">¿Alguna vez has desarrollado un rol de este estilo? </label>
+            <p class="sapd">Debes ser lo más sincero posible.</p>
+            <input type="text" id="rol" name="rol" required placeholder="Ejem: si/no" required="" value="">
+
             
             <h1 class="titulos2">Preguntas IC</h1>
              <div class="footer-bottom3"></div>
@@ -158,26 +156,44 @@
 
              <label for="name"> Nombre y Apellido :</label>
              <p class="sapd">El nombre IC debe ser el mismo utilizado en el Servidor.</p>
-             <input type="text" id="name" name="name" required  placeholder="Correo de Google/Gmail" required="" value="">
+             <input type="text" id="name02" name="name02" required  placeholder="Ejem: Robert Williams" required="" value="">
+
+             <label for="name"> Edad IC:</label>
+             <p class="sapd">La Edad IC debe ser el mismo utilizado en el Servidor.</p>
+             <input id="edad" name="edad" type="number" step="1" min="0" max="120" required placeholder="Ejem: 18/21 años">
+
+             <label for="name">Nacionalidad:</label>
+             <p class="sapd">Debe ser el mismo utilizado en el Servidor.</p>
+             <input type="text" id="nacionalidad" name="nacionalidad" required  placeholder="Estadounidense/Española" required="" value="">
+
+             <label for="department">Secretaria/Dependencia:</label>
+             <p class="sapd"></p>
+             <select id="department" name="department" required>
+                 <option value="">Seleccione una Secretaria</option>
+                 <option value="General de Gobierno">Secretaria General de Gobierno</option>
+                 <option value="Seguridad y Proteccion Ciudadana">Secretaria de Seguridad y Proteccion Ciudadana</option>
+                 <option value="SALUD">Secretaria de Salud</option>
+                 <option value="Economia y Trabajo">Secretaria de Economia y del Trabajo</option>
+                 <option value="Obras Publicas">Secretaria de Obras Publicas</option>
+                 <option value="Medio Ambiente e Historia Natural">Secretaria de Medio Ambiente e Historia Natural</option>
+                 <option value="Igualdad de Genero">Secretaria de Igualdad de Genero</option>
+                 <option value="Hacienda">Secretaria de Hacienda</option>
+                 <option value="Gobierno">Personal del gobierno (Trabajador comun)</option>
+             </select>
+
+             <label for="name"> ¿Cual es su experiencia laboral?:</label>
+             <p class="sapd"></p>
+             <input type="text" id="laboral" name="laboral" required  placeholder="" required="" value="">
+
+             <label for="name">¿Por qué cree que deberíamos contratarle?:</label>
+             <p class="sapd">El nombre IC debe ser el mismo utilizado en el Servidor.</p>
+             <input type="text" id="contrato" name="contrato" required  placeholder="Explica lo mejor posible y se claro" required="" value="">
 
              <label for="name">Acepta el tratamiento de Información</label>
-            <div class="radio-group">          
-                <label>
-                    <input type="radio" name="urgent" value="Sí" required> Sí
-                </label>
-                <label>
-                    <input type="radio" name="urgent" value="Tal vez"> Tal vez
-                </label>
-                <label>
-                    <input type="radio" name="urgent" value="Otro"> No
-                </label>
-            </div>
-            <div id="otherReasonContainer">
-                <label for="otherReason">Especifique la razón:</label>
-                <input type="text" id="otherReason" name="otherReason">
-            </div>
+             <p class="sapd">El nombre IC debe ser el mismo utilizado en el Servidor.</p>
+             <input type="text" id="tratamiento" name="tratamiento" required  placeholder="" required="" value="">
 
-                <label for="message">Mensaje:</label>
+                <label for="message">¿Como cree que podría aportar positivamente al Gobierno de San Andreas?:</label>
                 <p class="sapd"></p>
                 <textarea id="message" name="message" rows="5" required></textarea>
                 <div class="footer-bottom3"></div>
